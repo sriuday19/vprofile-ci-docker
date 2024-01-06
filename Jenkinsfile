@@ -12,9 +12,9 @@ pipeline {
 
     environment {
         scannerHome = tool 'sonar4'
-        aws_cred='ecr:us-east-1:aws-cred'
-        app_url= 'https://064729727835.dkr.ecr.us-east-1.amazonaws.com'
-        image_url= '064729727835.dkr.ecr.us-east-1.amazonaws.com/vprofile'
+        aws_cred = 'ecr:us-east-1:aws-cred'
+        app_url = 'https://064729727835.dkr.ecr.us-east-1.amazonaws.com'
+        image_url = '064729727835.dkr.ecr.us-east-1.amazonaws.com/vprofile'
   
     }
 
