@@ -1,7 +1,7 @@
 FROM openjdk:8 AS BUILD_IMAGE
 RUN apt-get update && apt-get install maven -y
-ADD /var/lib/jenkins/workspace/vprofile-ci-docker/* vprofile-project
-RUN cd vprofile-project
+RUN git clone https://github.com/sriuday19/vprofile-ci-docker.git
+RUN cd vprofile-ci-docker
 RUN mvn install
 
 FROM tomcat:8-jre11
