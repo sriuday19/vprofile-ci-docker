@@ -73,7 +73,7 @@ pipeline {
         stage('Building image') {
             steps {
                 script {
-                    docker_image = docker.build(image_url + ":${env.BUILD_NUMBER}", "./Dockerfiles/app/")
+                    docker_image = docker.build(image_url + ":${env.BUILD_NUMBER}", "./Dockerfiles/")
                 }
             }
         }
