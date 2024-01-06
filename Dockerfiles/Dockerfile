@@ -13,4 +13,4 @@ COPY --from=BUILD_IMAGE vprofile-ci-docker/target/vprofile-v2.war /usr/local/tom
 
 EXPOSE 8080
 
-CMD [ ""catalina.sh", "run"" ]
+CMD [ "catalina.sh", "run" ]
