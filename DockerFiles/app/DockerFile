@@ -1,6 +1,6 @@
 FROM openjdk:8 AS BUILD_IMAGE
 RUN apt-get update && apt-get install maven -y
-ADD ../../ vprofile-project
+ADD /var/lib/jenkins/workspace/vprofile-ci-docker/* vprofile-project
 RUN cd vprofile-project
 RUN mvn install
 
