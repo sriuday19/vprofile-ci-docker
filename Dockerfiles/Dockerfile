@@ -1,8 +1,7 @@
 FROM openjdk:8 AS BUILD_IMAGE
 RUN apt-get update && apt-get install maven -y
 RUN git clone https://github.com/sriuday19/vprofile-ci-docker.git
-RUN cd vprofile-ci-docker
-RUN mvn install
+RUN cd vprofile-ci-docker && mvn install
 
 FROM tomcat:8-jre11
 LABEL Author="uday"
