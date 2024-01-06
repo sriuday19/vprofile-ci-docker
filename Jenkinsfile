@@ -15,6 +15,7 @@ pipeline {
         aws_cred = 'ecr:us-east-1:aws-token'
         app_url = 'https://064729727835.dkr.ecr.us-east-1.amazonaws.com'
         image_url = '064729727835.dkr.ecr.us-east-1.amazonaws.com/vprofile'
+        image_name = 'vprofile'
   
     }
 
@@ -82,7 +83,7 @@ pipeline {
             steps {
                 script {
                     docker.withRegistry(app_url, aws_cred) {
-                        docker_image.push("vprofile:${env.BUILD_NUMBER}:latest")
+                        docker_image.push("${env.image_name}:${env.BUILD_NUMBER}")
                     }
                 }
             }
