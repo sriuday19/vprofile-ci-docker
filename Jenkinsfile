@@ -83,7 +83,7 @@ pipeline {
             steps {
                 script {
                     docker.withRegistry(app_url, aws_cred) {
-                        docker_image.push("${env.image_name}:${env.BUILD_NUMBER}")
+                        docker_image.push(image_name+ ":${env.BUILD_NUMBER}")
                     }
                 }
             }
